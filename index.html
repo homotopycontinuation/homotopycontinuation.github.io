@@ -1,0 +1,58 @@
+
+<!DOCTYPE html><html><head><meta
+charset="utf-8"><meta
+name="viewport" content="width=device-width,
+			 initial-scale=1"><title>Homotopy
+      Continuation @ CVPR 2024</title><style type="text/css">body{margin:0vw
+	    auto;max-width:50vw;line-height:1.6;font-size:1.5vw;color:#444;background-size: 30%;background-repeat: no-repeat;background-position: 35% 15%;}h1,h2,h3{line-height:1.2}      </style></head><body background="hc-slide.png">
+
+    <header><h1>Efficient Homotopy Continuation<br> for Solving Polynomial Systems in Computer Vision Applications</h1>
+    </header>
+    <p align="right">
+    <h4 style="text-align: right">A Half-day Tutorial<br><a href="https://cvpr.thecvf.com/">CVPR 2024 Seattle</a></h4>
+    <h3 style="text-align: right">Monday June 17, 2025 <br>1:30 -- 6:00 PM PT</h3>
+    <h2 style="text-align: right">Organizers</h2>
+    <ul style="text-align: right">
+	<li style="list-style-type: none; text-align: right"><strong><a href="https://engineering.brown.edu/people/benjamin-kimia">Ben Kimia</a></strong> (Brown)</li>
+<li style="list-style-type: none; text-align: right"><strong><a href="https://timduff35.github.io/timduff35/">Tim Duff</a></strong> (UW)</li>
+<li style="list-style-type: none; text-align: right"><strong><a href="https://rfabbri.github.io/">Ricardo Fabbri</strong></a> (IPRJ/UERJ)</li>
+	<li style="list-style-type: none; text-align: right"><strong><a href="https://www.linkedin.com/checkpoint/challengesV2/AQEh0-U_DsHuLwAAAZAa_GP4O96MqK5mSL72W62yVNmhBQv5CJ5OBeyRd1zbGWC61TqvHrm2AzjXzcT5QhOZ_8K4FB2889q55w?original_referer=https%3A%2F%2Fwww.google.com%2F">Hongyi Fan</a> </strong> (Cognex)</li></ul>
+    <h2 style="text-align: right">Room: Summit 447</h2>
+    </p>
+    <h2>Program</h2>
+<ul>
+<li><b>1:30 -- 2:00</b> (Kimia) Motivation and Need</li>
+<li><b>2:00 -- 2:30</b> (Fan) Approaches to solving polynomial problems <a href="./CVPR-2024-Tutorial-Polynomial.pptx">Slides</a></li>
+<li><b>2:30 -- 3:00</b> (Duff) General Introduction to Homotopy - Continuation (Part 1). <a href="./tim-HCtut.pdf">Slides</a></li>
+<li><b>3:00 -- 4:00</b> Coffee Break</li>
+<li><b>4:00 -- 4:30</b> (Duff) General Introduction to Homotopy Continuation (Part 2)</li>
+<li><b>4:30 -- 4:50</b> (Fabbri) Efficient Implementation of Homotopy
+  Continuation <a href="./CVPR-2024-HC-Tutorial-FastSolverDesign.pdf">Slides</a></li>
+<li><b>4:50 -- 5:10</b> (Fan) GPU Implementation of HC for Real-Time Usage <a href="./CVPR-2024-Tutorial-GPU.pptx">Slides</a></li>
+<li><b>5:10 -- 5:50</b> (Fabbri) Building your own fast Homotopy Continuation
+  solver: </li><a href="./CVPR-2024-HC-Tutorial-FastSolverHowTo.pdf" >Solver</a>
+<li><b>5:50 -- 6:00</b> (Kimia) Closing Remarks</li>
+</ul>
+    <h2>Overview</h2>
+    <p>
+Minimal problems and their solvers play an important role in
+RANSAC-based approaches to several estimation problems in vision. Minimal solvers solve
+systems of equations, depending on data, which obey a “conservation of number
+principle”: for sufficiently generic data, the number of solutions over the complex numbers
+is constant. Homotopy continuation (HC) methods exploit not just this conservation
+principle, but also the smooth dependence of solutions on problem data.
+The classical solution of polynomial systems using Gr&ouml;bner bases, resultants, elimination
+templates, etc. has been largely successful in smaller problems, but these methods are
+not able to tackle larger polynomials systems with a larger number of solutions. While HC
+methods can solve these problems, they have been notoriously slow. Recent research by
+the presenters and other researchers has enabled efficient HC solvers with the ability for
+real-time solutions.</p>
+
+<p>The main objective of this tutorial is to make this technology more 
+accessible to the computer vision community. Specifically, after an overview of how such
+methods can be useful for solving problems in vision (e.g., absolute/relative pose,
+triangulation), we will describe some of the basic theoretical apparatus underlying HC
+solvers, including both local and global “probability-1” aspects. On the practical side, we
+will describe recent advances enabled by GPUs and how to
+build your own HC-based minimal solvers.
+ </body></html>
