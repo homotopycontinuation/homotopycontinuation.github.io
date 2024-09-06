@@ -8,25 +8,46 @@ body {
    margin: 0;
    padding: 0;
 /*   background-color:#000000;*/
-   color: rgb(60,60,60);
+   color: rgb(80,80,80);
    font-family: Helvetica,'Helvetica Neue',Arial,sans-serif;
 /*   border-top: 1px solid #ff521d;*/
 }
 
 
 h1, h2 {
-   color:#1069c9;
+/*   color:#1069c9;*/
+/*  color:#3f88de;*/
+  color: rgb(70,70,70);
+}
+
+h2 {
+/*   color:#1069c9;*/
+/*  color:#3f88de;*/
+/*  color: #4147ac;*/
+  color: #4950c1;
+  
 }
 
 a, .soon {
-   color:#fc673d;
+/*   color:#fc673d;*/
 /*   color:#ff521d;*/
+/*  color:#3f88de;*/
+/*  color:#3f88de;*/
+/*  color:#3f88de;*/
+   color:#a52218;
+/*   color:#fc673d;*/
    text-decoration:none;
 }
 
 a:visited {
    text-decoration:none;
-   color:#fdb25a;
+/*   color:#fc673d;*/
+/*   color:#fdb25a;*/
+/*   color:#a52218;*/
+/*  color:#dcc276;*/
+   
+/*  color:#70a3de;*/
+  color:#ddc377;
 }
 	
 a:hover, a:active, a:focus {
