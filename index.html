@@ -7,12 +7,13 @@
 -->
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>3D Curve Drawings</title>
+  <title>Homotopy Continuation Resource Central</title>
     <!-- This is a very quick hack started by Ric Fabbri -->
   <meta name="keywords" content="computer vision reconstruction photogrammetry structure from motion differential projective geometry">
-  <meta name="description" content="Homepage of the Multiview 3D Drawing system">
+  <meta name="description" content="Homepage of the HC Resource Central">
   <meta name="Author" content="Ricardo Fabbri">
-  <link rel="stylesheet" type="text/css" href="hc.css" title="Multiview 3D Drawing Style" />
+  <meta name="Author" content="Tim Duff">
+  <link rel="stylesheet" type="text/css" href="hc.css" title="HC Style" />
   <link rel="icon" type="image/png" href="figs/hc-favicon.png" /> 
   <!-- <meta name=viewport content='width=600'>-->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,9 +22,9 @@
 <body>
 <div id="container">
 <div id="content">
-<h1>3D Curve Drawings</h1>
+<h1>Homtopy Continuation Resource Central</h1>
 
-<img src="figs/capitol-drawing-1-improved-sm2.png" width="50%" align="right"></img>
+<!--<img src="figs/capitol-drawing-1-improved-sm2.png" width="50%" align="right"></img>-->
 
 
 <!--
@@ -39,19 +40,20 @@
 <h2>About</h2>
 
 <p>
-This is the companion website to the paper:
+This website is work in progress.
 </p>
 <p>
-<a href="http://arxiv.org/abs/1609.05561">From Multiview Image Curves to 3D Drawings</a> <em>ECCV 2016</em> <br /> Expanded version (<a href="papers/usumezbas-fabbri-kimia-ECCV2016-expanded.pdf">pdf</a> | <a href="papers/usumezbas-fabbri-kimia-ECCV2016-supplementary.pdf">supplement</a> | <a href="papers/usumezbas-fabbri-kimia-ECCV2016-poster.pdf">poster</a> | <a href="http://rfabbri.github.io/stuff/usumezbas-fabbri-kimia-ECCV2016-bib.txt">bib</a>)</li>
+<!--<a href="http://arxiv.org/abs/1609.05561">From Multiview Image Curves to 3D Drawings</a> <em>ECCV 2016</em> <br /> Expanded version (<a href="papers/usumezbas-fabbri-kimia-ECCV2016-expanded.pdf">pdf</a> | <a href="papers/usumezbas-fabbri-kimia-ECCV2016-supplementary.pdf">supplement</a> | <a href="papers/usumezbas-fabbri-kimia-ECCV2016-poster.pdf">poster</a> | <a href="http://rfabbri.github.io/stuff/usumezbas-fabbri-kimia-ECCV2016-bib.txt">bib</a>)</li>-->
 </p>
 <p>Feel free to contact us if you need additional information or source code.
 Please note that this is a dynamic website that is frequently updated.</p>
 
 <h3>Authors</h3>
 <ul>
-  <li><b>Anil Usumezbas</b>: main author of the 3D drawing system. Researcher at SRI International</li>
-  <li><b>Ricardo Fabbri</b>: main author of the <b>3D Curve Sketch</b> system and other curve-based SfM technology, tenured professor at Rio de Janeiro State University</li>
-  <li><b>Benjamin Kimia</b>: professor at Brown University and a mentor of the curve-based paradigm</li>
+  <li><b>Benjamin Kimia</b>: professor at Brown University </li>
+  <li><b>Timothy Duff</b>: </li>
+  <li><b>Ricardo Fabbri</b>: </li>
+  <li><b>Hongyi Fan</b>:  </li>
 </ul>
 
 <p>
@@ -63,7 +65,7 @@ Please note that this is a dynamic website that is frequently updated.</p>
 
 <a name="code"></a>
 <h2>Code</h2>
-<h3>3D Curve Sketch</h3>
+<h3>Minus</h3>
 <ul>
   <li>Source code is in the new <a href="http://github.com/rfabbri/vxd">VXD project</a> we created
     as part of the 3D Curve Drawing code release effort. The relevant code is in
@@ -73,19 +75,18 @@ Please note that this is a dynamic website that is frequently updated.</p>
     the git log for news regarding this code base, or email us for news or
     instructions. Only Linux or Mac OSX are supported.</li>
 </ul>
-<h3>3D Curve Drawing</h3>
-<ul>
-  <li>Source code in Matlab <a class="soon">coming soon!</a></li>
-  <li>This code is in matlab. We are in the process of making this code
-     available in a usable form. In the meanwhile, please contact us.</li> </ul>
+<h3>Macaulay2 packages<a class="soon">coming soon!</a></li></h3>
+<!--<ul>-->
+<!--  <li>Source code in Matlab -->
+<!--  <li>This code is in matlab. We are in the process of making this code-->
+<!--     available in a usable form. In the meanwhile, please contact us.</li> </ul>-->
 
 <a name="data"></a>
 <h2>Datasets</h2>
 <p>
-We have devised a number of datasets for curve-based multiview reconstruction
-and camera estimation algorithms, described in further detail at the end of
-this webpage.  
+This section lists datasets to evaluate HC.
 </p>
+<!--
 <ul>
   <li><b><a href="#pavilion">Barcelona Pavillion</a></b>:    the first realistic large-scale synthetic dataset with full groundtruth. Download is now available!</li>
   <li><b><a href="#vase">Vase dataset</a></b>: real data obtained from manually marking edges on structured light scans.</li>
@@ -94,6 +95,7 @@ this webpage.
   <li><b><a href="#amsterdam">Amsterdam House</a></b>: <a class="soon">coming soon!</a></li>
   <li><b><a href="#capitol">Capitol High</a></b>: <a class="soon">coming soon!</a></li>
 </ul>
+-->
 
 <a name="seealso"></a>
 <h2>Publications</h2>
@@ -129,179 +131,11 @@ Calibration</b>, <i> CVPR 2010</i>, R.Fabbri and B. Kimia. The practical basis o
  <li><a href="http://rfabbri.github.io">Updated list of publications</a></li>
 </ul>
 
-<a name="pavilion"></a>
-<h2>Barcelona Pavillion Dataset</h2>
-<!-- TODO: vids from vimeo -->
-<p> The first
-publicly available, realistic 3D curve ground truth dataset to be used in
-the evaluation of curve-based multiview stereo and camera estimation algorithms. 
-</p>
-<p><a href="#barcelona-details">Skip to details and download</a></p>
-<h3>Overview</h3>
-<h4>Realistic videos rendered under 3 extreme illuminations</h4>
-<img class="bigimg" src="figs/pavilion.jpg" alt="" />
-<h4>Sample frames
-		of three different videos for different illumination conditions</h4>
-<img class="bigimg" src="figs/pavilion-frames.jpg" alt="" />
-<h4>The full curve ground truth and a useful bounding box</h4>
-<img class="bigimg" src="figs/full-gt.png" alt="" />
-<img class="bigimg" src="figs/bbx-gt.png" alt="" />
-<h4>Mesh edges are deleted to make the desired ground truth edges explicit</h4>
-<img class="bigimg" src="figs/chair-3d-overlay.png" alt="" />
-<img class="bigimg" src="figs/chair-gt-blueprint.png" alt="" />
-<h4>Even minute objects were modeled by discarding internal mesh edges (blue below)</h4>
-<img class="bigimg" src="figs/pavilion-zoom.jpg" alt="" />
-<img class="bigimg" src="figs/pavilion-lotus-sm.png" alt="" />
-<h4>Camera path (blue) used to render the videos and generate ground-truth cameras</h4>
-<img class="bigimg" src="figs/pavilion-camera-path.jpg" alt="" />
+<h2>HC for locating critical points of Dynamical Systems</h2>
 
-<h4>Video Samples for the Chair Sequence</h4>
+del Campo, Abraham Martin, and Jose Israel Rodriguez. "Critical points via monodromy and local methods." Journal of Symbolic Computation 79 (2017): 559-574.
 
 
-<!--<div class="videoWrapper">-->
-<!--  <iframe src="https://player.vimeo.com/video/138590706?color=ff9933" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>-->
-<!--</div>-->
-
-
-<!--<div class='embed-container'><iframe src='https://player.vimeo.com/video/138590706' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div><div class='embed-container'><iframe src='https://player.vimeo.com/video/138590706' frameborder='0' webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></div>-->
-
-<div id="centered">
-  <iframe src="https://player.vimeo.com/video/138409969?color=ff9933" width="320" height="180" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><br /><iframe src="https://player.vimeo.com/video/138590706?color=ff9933" width="160" height="90" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe><iframe src="https://player.vimeo.com/video/138195224?color=ff9933" width="160" height="90" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-</div>
-
-<a name="barcelona-details"></a>
-<h3>Download <span style="color:green"> new! </span></h3>
-<ul>
-    <li><a href=" https://github.com/rfabbri/pavilion-multiview-3d-dataset">Download or Browse at Github</a> (~3GB). This way you can download
-      the entire archive or just individual files, and when changes occur you can download incrementally or even contribute. <b>You will neeed <a href="https://git-lfs.github.com">Git LFS</a> (Large File Storage). Clone the repository, then run <pre>git lfs pull</pre></b></li>
-   <li>This dataset is being continuously updated, please check for news in the <a href="https://github.com/rfabbri/pavilion-multiview-3d-dataset/commits/master">Git log</a></li>
-</ul>
-<h3>Details</h3>
-<p>
-The Barcelona Pavillion is a realistic synthetic dataset
-we created for validating curve-based 3D SfM and stereo algorithms with control over
-illumination, geometry and cameras. <em>Non-curve-based multiview stereo and SfM algorithms also benefit from this dataset, as we provide full detailed mesh ground truth.</em>
-</p>
-
-<p>The dataset consists of:</p>
-<ul>
-   <li>3D models composing a large, mostly man-made, scene professionally composed
-by eMirage studios using the 3D modeling software Blender</li>
-   <li>ground-truth cameras fly-by's around chairs with varied reflectance models and cluttered background</li>
-   <li>ground-truth videos realistically rendered with high
-quality ray tracing from Blender under 3 extreme illumination
-conditions (morning, afternoon, and night)</li>
-   <li>ground-truth 3D curve geometry obtained by manually tracing over the meshes.</li>
-   <li>real-world referencing: this synthetic data was modeled after a real scene in Barcelona, for which real information such as imagery and dimensions is available</li>
-</ul>
-
-<a name="vase"></a>
-<h2>Vase Dataset</h2>
-<p>Real data obtained from manually marking edges on structured light scans.</p>
-<p><a href="#vase-details">Skip to details and download</a></p>
-
-<h3>Overview</h3>
-<p>
-This real curve 3D groundtruth is constructed by manually deleting points of a
-dense point cloud obtained from structured lighting. Using the point cloud
-alone, the 3D edges are not identifiable with confidence. Therefore, we reproject
-the dense point cloud scan onto reference images during editing for disam
-biguating edges. The unstructured point cloud from structured lighting tends to
-suffer from oversmoothing, and lacks structure near edges, which we recover
-from the reference images registered using the ground truth camera parameters.
- </p>
-
-<h4>Red points near edges obtained from structured lighting registered to images</h4>
-<img class="bigimg" src="figs/vase-gt.png" alt="" />
-
-<h4>Points from the 3D scan that are on homogeneous regions are manually deleted.
-The selected points to be deleted are shown in yellow simultaneously in reference views and on
-the 3D scan itself, so that with confidence we know its not an edge</h4>
-<img class="bigimg" src="figs/vase.jpg" alt="" />
-
-<h4>Cameras corresponding to the reference views (left) and zoom into the deletion process</h4>
-<img class="bigimg" src="figs/vase-cams-zoom.jpg" alt="" />
-
-
-<a name="vase-details"></a>
-<h3>Download <span style="color:green"> new! </span></h3>
-<ul>
-    <li><a href=" https://github.com/rfabbri/vase-multiview-3d-curve-dataset">Download or Browse at Github</a> (~100MB). This way you can download
-   the entire archive or just individual files, and when changes occur you can download incrementally or even contribute. <b>You will neeed <a href="https://git-lfs.github.com">Git LFS</a> (Large File Storage). Clone the repository, then run <pre>git lfs pull</pre></b></li>
-    </li>
-   <li>This dataset is being continuously updated, please check for news in the <a href="https://github.com/rfabbri/vase-multiview-3d-curve-dataset/commits/master">Git log</a></li>
-</ul>
-<h3>Details</h3>
-
-<ul>
-  <li>The structured lighting scans and camera models were obtained from the <a href="http://roboimagedata.compute.dtu.dk">DTU Robot Image datasets</a></li>
-   <li>The editing was performed in Blender by loading the cameras and setting the images as references</li>
-</ul>
-
-<a name="synthcurves"></a>
-<h2>Synthetic Curves Dataset</h2>
-<p>
-  Space curves with known formulae are sampled and projected to subpixel edgels (tangent and  other differential-geometric information) to generate image sequences. 
-</p>
-<p><a href="#synthcurves-details">Skip to details and download</a></p>
-
-<h3>Overview</h3>
-The differential geometry arises by projecting the 3D measurements according to "Multiview Differential geometry of Curves", IJCV 2016.
-
-<h4>Analytic multiview data to 3rd order (tangent, curvature, curvature derivative)</h4>
-<img src="figs/data-sphere-new-v2.png" alt="" class="center" />
-<img class="bigimg" src="figs/synthetic-data.png" alt="" />
-
-
-<a name="synthcurves-details"></a>
-<h3>Download <span style="color:green"> new </span></h3>
-<ul>
-    <li><a href=" https://github.com/rfabbri/synthcurves-multiview-3d-dataset">Download or Browse at Github</a> (~100MB). This way you can download
-   the entire archive or just individual files, and when changes occur you can download incrementally or even contribute. <b>You will neeed <a href="https://git-lfs.github.com">Git LFS</a> (Large File Storage). Clone the repository, then run <pre>git lfs pull</pre></b></li>
-    </li>
-   <li>This dataset is being continuously updated, please check for news in the <a href="https://github.com/rfabbri/synthcurves-multiview-3d-dataset/commits/master">Git log</a></li>
-</ul>
-
-<h3>Details</h3>
-<ul>
-   <li> 40 curves:Lines, circles, ellipses, helices, and another space curve with complicated torsion.  </li>
-   <li> 5117 samples total in 2D and 3D </li>
-   <li> Cameras in three geometries: </li>
-   <ol>
-      <li>Spherical configuration: 100 views</li>
-      <li>Video camera configuration (small focal length)</li>
-      <li>Micro-CT configuration (objects lying between optical center and CCD)</li>
-   </ol>
-   <li> Space curves are sampled and projected to subpixel edgels (tangent and
-     other differential-geometric information) to generate a video. The differential geometry arises by projecting the 3D measurements according to "Multiview Differential geometry of Curves", IJCV 2016. </li> 
-   <li>Each image is 500x400px</li>
-   <!-- TODO get info from paper and code -->
-</ul>
-
-
-<a name="amsterdam"></a>
-<h2>Amsterdam House Dataset</h2>
-<a class="soon">coming soon!</a>
-
-<h2>Capitol High Dataset</h2>
-<a class="soon">coming soon!</a>
-
-
-<br />
-<br />
-<br />
-<br />
-<br />
-
-<h1>References</h1>
-
-<a href="http://faperj.br"><img style="margin-bottom:2px;" src="http://www.faperj.br/image_FAPERJ_2012/img_15.jpg" height="35px"></img></a>
-<a href="http://www.nsf.gov"><img src="https://www.nsf.gov/images/logos/nsf1.gif" height="40px"></img>
-<a href="http://www.sri.com"><img style="margin-bottom:5px;" src="https://upload.wikimedia.org/wikipedia/en/3/34/SRI_International_logo_2011.png" height="20px"></img>
-<a href="http://www.iprj.uerj.br"><img style="margin-bottom:2px;" src="figs/logo-iprj-sm.png" height="38px"></img>
-<a href="http://sourceforge.net"><img src="https://sourceforge.net/sflogo.php?type=13&group_id=274282" height="30px" width="120px"></img>
-<a href="http://vision.lems.brown.edu"><img src="figs/brown-engin-sm.png" height="39px"></img>
-<a href="http://labmacambira.sourceforge.net"><img src="figs/aa-sm.png" height="38px"></img>
 
 </div> <!-- end content -->
 </div> <!-- end container -->
