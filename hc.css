@@ -1,0 +1,132 @@
+/*
+ * Multiview 3D curve drawings hacked quick n dirty style file
+ * Initial hack by Ric Fabbri
+ *
+ */
+
+body {
+   margin: 0;
+   padding: 0;
+/*   background-color:#000000;*/
+   color: rgb(60,60,60);
+   font-family: Helvetica,'Helvetica Neue',Arial,sans-serif;
+/*   border-top: 1px solid #ff521d;*/
+}
+
+
+h1, h2 {
+   color:#1069c9;
+}
+
+a, .soon {
+   color:#fc673d;
+/*   color:#ff521d;*/
+   text-decoration:none;
+}
+
+a:visited {
+   text-decoration:none;
+   color:#fdb25a;
+}
+	
+a:hover, a:active, a:focus {
+   color:#1069c9;
+}
+
+.divider {
+  color:#ff521d;
+}
+
+/* Document Layout */
+
+/* Container of core page - project text */
+#container {
+  max-width: 800px;
+  margin: 0 auto 0 auto;
+  padding: 0;
+/*  border: solid green;*/ /*for debug*/
+}
+
+#content {
+/*  padding-right: 30px;*/
+/*  margin:0 150px 0 0;*/
+}
+
+#logo {
+    margin-top: 5%;
+}
+
+img {
+    border: 0;
+}
+
+#content p,h1,h2,h3,ul {
+   margin-left:1px;
+}
+
+.bigimg {
+   max-width: 100%;
+}
+
+h4 {
+   margin-top:2em;
+}
+/*
+#content_text{
+   margin-top: 2%;
+   text-align: center;
+}
+
+#content_text2{
+   margin-top: 20%;
+   font-size:40%;
+   text-align:center;
+   color:#ff521d;
+}
+*/
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.embed-container { 
+   position: relative; padding-bottom: 26.72%; height: 0; overflow: hidden; max-width: 47.5%; 
+   float:left;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed { 
+   position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+}
+
+#centered {
+  display:block;
+  margin: 0 auto;
+  width:320px;
+}
+#centered2 {
+  display:block;
+  margin: 0 auto;
+  width:320px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+iframe {
+   border:0;
+   margin:0:
+}
