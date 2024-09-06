@@ -7,7 +7,7 @@
 -->
 <head>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>Homotopy Continuation Resource Central</title>
+  <title>Homotopy Continuation Resource Center</title>
     <!-- This is a very quick hack started by Ric Fabbri -->
   <meta name="keywords" content="algebraic geometry polynomials systems equations computer vision reconstruction photogrammetry structure from motion differential projective geometry">
   <meta name="description" content="Homepage of the HC Resource Central">
@@ -22,13 +22,9 @@
 <body>
 <div id="container">
 <div id="content">
-<h1>Homotopy Continuation Resource Central</h1>
+<h1>Homotopy Continuation Resource Center</h1>
 
 <!--<img src="figs/capitol-drawing-1-improved-sm2.png" width="50%" align="right"></img>-->
-
-<p>
-This website is work in progress.
-</p>
 
 
 <!--
@@ -40,20 +36,21 @@ This website is work in progress.
   </tr>
 </table>
 -->
+Welcome to the HC Resource Center - HCRC, a selection of resources on efficient
+solving of challenging systems of polynomial equations using the numerical technique of Homotopy Continuation.
 
 <h2>About</h2>
 
 <p>
-  Welcome to the HC Central, ia a list of resources for solving systems of
-  polynomial
-  equations using the numerical technique of Homotopy Continuation. This list is
-  hand-curated by us - an active team of researchers in
-  computational algebraic geometry with an experience in hard problems arising
+  This selection is
+  hand-curated by us -- an active team of researchers in
+  computational algebraic geometry with experience in hard problems arising
   from computer vision applications such as Augmented Reality and autonomous
-  cars. Any application can benefit from this information.
-
+  cars. Many other compute-bound applications can benefit from this information.
+</p>
+<p>
   It is not our intent to produce a comprehensive list of resources, but, rather
-  an opinionated selection that we personally recommend looking at. Our emphasis
+  an opinionated selection that we personally recommend looking at (including our own work). Our emphasis
   is on achieving real-time speed for online AR applications, rather than
   extreme precision, certification or robustness. All references are directly or
   indirectly aimed towards tackling the real-time scenario.
@@ -67,40 +64,63 @@ Please note that this is a dynamic website that is frequently updated.</p>
 <h3>Authors</h3>
 <ul>
   <li><b>Benjamin Kimia</b>: professor at Brown University </li>
-  <li><b>Timothy Duff</b>: </li>
-  <li><b>Ricardo Fabbri</b>: </li>
-  <li><b>Hongyi Fan</b>:  </li>
+  <li><b>Timothy Duff</b>: professor at University of Misouri</li>
+  <li><b>Ricardo Fabbri</b>: professor at IPRJ/UERJ, Rio de Janeiro State University</li>
+  <li><b>Hongyi Fan</b>: Cognex corporation </li>
 </ul>
 
 <p>
-<big><span style="color:green"> new! </span><a href="#code">Code for 3D Curve Sketch now available!</a><span style="color:green"> new! </span></big><br />
-<big><span style="color:green"> new! </span><a href="#seealso">CVPR 2017 paper "The Surfacing of Multiview 3D Drawings  via Lofting.." accepted!</a><span style="color:green"> new! </span></big><br />
-<big><span style="color:green"> new! </span><a href="#synthcurves">Analytic Multiview Curve Dataset now available!</a><span style="color:green"> new! </span></big><br />
-<big><span style="color:green"> new! </span><a href="#seealso">ArXiv preprint "Trifocal Relative Pose from Lines at Points and its Efficient Solution"</a><span style="color:green"> new! </span></big><br />
+<a href="https://mathinstitutes.org/highlights/algebraic-computer-vision-advances-the-3d-reconstruction-of-curves-and-surfaces-from-multiple-views/"><b>Our collaboration began in 2018 at ICERM/Brown Univesity</b></a> when we designed and optimized the first solver for the problem of reconstructing three images and the camera position from three oriented point correspondences, having algebraic degree of nonlinearity 312. The related paper is
+</p>
+
+<p>
+<a class="publink" href="https://arxiv.org/abs/1903.09755">Trifocal Relative Pose from Lines at Points</a></b>, <i>IEEE Transactions on Pattern Analysis and Machine Intelligence</i>, 2022, <i>CVPR 2020</i> (online march 23 2019 4:29 UTC), Ricardo Fabbri, Timothy Duff, Hongyi Fan, Margaret Regan, David de Pinho (my former MSc. Student), Elias Tsigaridas, Charles Wampler, Jonathan Hauenstein, Peter Giblin, Benjamin Kimia, Anton Leykin and Tomas Pajdla (<a href="stuff/fabbri-etal-trifocal-PAMI2022-accepted-arxiv.pdf">pdf</a> |  
+   <a href="http://github.com/rfabbri/minus">code</a> | <a href="http://multiview-3d-drawing.sf.net">datasets</a> | <a href="stuff/fabbri-kimia-etal-CVPR2020-bib.txt">bib</a>)
+   <small>
+  <ul style="list-style: none;">
+    <li>
+      <em>
+        The collaboration around this paper lead to important works, including <b>two best paper awards at CVPR</b> 2019 and 2022 (Duff, Leykin, Pajdla, et.al.)
+<!--          </a><br />-->
+<!--          Accepted into <a href="https://github.com/openMVG/openMVG/pull/2053">OpenMVG</a> utilizing SIFT orientation.<span style="color:green"> new! </span>-->
+      </em>
+    </li>
+  </ul>
+  </small>
+</p>
+
+ Please cite this paper when referring to HCRC.
+
+<p>
+<big><span style="color:green"> new! </span><a href="#code">Line-point Macaulay2 tutorial in minus/tutorial/linepoint!</a><span style="color:green"> new! </span></big><br />
+<big><span style="color:green"> new! </span><a href="#seealso">Metric Multiview Geometry -- A Catalogue in Low Dimensions by Duff and Rydel</a><span style="color:green"> new! </span></big><br />
 </p>
 
 <a name="code"></a>
 <h2>Code</h2>
-<h3>Minus</h3>
+<h3>Minus C++ Fast Solver Framework</h3>
 <ul>
-  <li>Source code is in the new <a href="http://github.com/rfabbri/vxd">VXD project</a> we created
-    as part of the 3D Curve Drawing code release effort. The relevant code is in
-    the <a href="https://github.com/rfabbri/vxd/tree/master/contrib/brld/bmvgd/bmcsd">BMCSD (Brown Multiview Curve Sketch) library</a>.  We are preparing better
-    instructions, it is a fairly large multithreaded system, but we suggest you
-    start looking at <a href="https://github.com/rfabbri/vxd/blob/master/contrib/brld/bmvgd/bmcsd/cmd/mcs.cxx">bmcsd/cmd/mcs.cxx (multiview curve sketch command)</a>.  Check out
-    the git log for news regarding this code base, or email us for news or
-    instructions. Only Linux or Mac OSX are supported.</li>
+  <li>A framework for square problems</li>
+  <li><a href="http://github.com/rfabbri/minus">Github</a></li>
+  <li>Highly optimized beyond Eigen</li>
+  <li>Fast CPU-oriented solver</li>
 </ul>
-<h3>Macaulay2 packages<a class="soon">coming soon!</a></li></h3>
+<h3>Macaulay2 packages<a class="soon"> coming soon!</a></h3>
+<ul>
+  <li><a href="https://macaulay2.com/doc/Macaulay2/share/doc/Macaulay2/MonodromySolver/html/">MonodromySolver</a> package</li>
+</ul>
+
 <!--<ul>-->
 <!--  <li>Source code in Matlab -->
 <!--  <li>This code is in matlab. We are in the process of making this code-->
 <!--     available in a usable form. In the meanwhile, please contact us.</li> </ul>-->
+<h3>GPU-based solvers</h3>
+<a class="soon"> coming soon!</a>
 
 <a name="data"></a>
 <h2>Datasets</h2>
 <p>
-This section lists datasets to evaluate HC.
+This section lists datasets to evaluate HC. <a class="soon">coming soon!</a>
 </p>
 <!--
 <ul>
@@ -115,41 +135,32 @@ This section lists datasets to evaluate HC.
 
 <a name="seealso"></a>
 <h2>Publications</h2>
+
+<h3>Our publications</h3>
+
 <ul>
   <li><b><a class="publink" href="https://arxiv.org/abs/1903.09755">Trifocal Relative Pose from Lines at Points and its Efficient Solution</a></b>, <i>Arxiv</i>, march 23 2019 4:29 UTC, R. Fabbri, T. Duff, H. Fan, M. Regan, D. de Pinho, E. Tsigaridas, C. Wrampler, J. Hauenstein, P. J. Giblin, B. Kimia, A. Leykin &amp; T. Pajdla (<a href="http://rfabbri.github.io/stuff/fabbri-kimia-etal-arxiv2019-v3.pdf">pdf</a> |  
    <a href="http://github.com/rfabbri/minus">code</a> | <a href="http://multiview-3d-drawing.sf.net">datasets</a>)
 <span style="color:green"> new! </span>
   </li>
- <li><b><a class="publink" href="http://multiview-3d-drawing.sf.net">The Surfacing of Multiview 3D Drawings via Lofting and Occlusion Reasoning</a></b>, <i>CVPR 2017</i>, R. Fabbri, A. Usumezbas &amp; B. Kimia (<a href="http://multiview-3d-drawing.sf.net/papers/usumezbas-fabbri-kimia-CVPR2017-expanded.pdf">pdf</a> | <a href="http://multiview-3d-drawing.sf.net/papers/usumezbas-fabbri-kimia-CVPR2017-supplementary.pdf">supplement</a> | <a href="http://multiview-3d-drawing.sf.net">code</a> | <a href="http://multiview-3d-drawing.sf.net">datasets</a> | <a href="http://multiview-3d-drawing.sf.net">website</a> | <a href="http://rfabbri.github.io/stuff/usumezbas-fabbri-kimia-CVPR2017-bib.txt">bib</a>)
- </li>
- <li><b><a href="http://link.springer.com/article/10.1007%2Fs11263-016-0912-7">Multiview Differential Geometry of Curves</a></b>, R. Fabbri and B. Kimia, IJCV, 2016 (<a href="https://arxiv.org/abs/1604.08256">pdf</a> | bib)</li>
- <small>
-   <ul style="list-style: none;">
-     <li>The theoretical basis of our 3D curve-based reconstruction and pose estimation / extrinsic calibration technology. This paper shows how to recontruct and reproject curve tangents, curvatures and torsions, and occluding contours, using standard camera models.</li>
-   </ul>
- </small>
- <li><b>3D Curve Sketch: Flexible Curve-Based Stereo Reconstruction and
-Calibration</b>, <i> CVPR 2010</i>, R.Fabbri and B. Kimia. The practical basis of the 3D Curve Drawing work above (<a
- href="http://rfabbri.github.io/stuff/fabbri-kimia-CVPR10.pdf">pdf</a> | 
- <a href="http://rfabbri.github.io/stuff/fabbri-kimia-poster-CVPR10.pdf">poster</a> | 
- <a href="http://multiview-3d-drawing.sf.net">code</a>  |
- <a href="http://multiview-3d-drawing.sf.net">website</a>  |
- <a href="http://rfabbri.github.io/stuff/fabbri-kimia-CVPR10-bib.txt">bib</a>)
- </li>
- <li><b><a class="publink" href="http://link.springer.com/chapter/10.1007%2F978-3-642-33765-9_17#page-1">Camera Pose Estimation Using Curve
-       Differential Geometry</a></b>, <b>updated and published into PAMI 2020</b><i>ECCV 2012, Firenze, Italy</i>, R. Fabbri, P. J. Giblin &amp; B. Kimia (<a
- href="stuff/fabbri-giblin-kimia-eccv2012-final-ext.pdf">pdf</a> | 
- <a href="https://github.com/rfabbri/diffgeom2pose">code</a> |
- <a href="stuff/fabbri-giblin-kimia-ECCV12-bib.txt">bib</a>)
- </li>
- <li><a href="https://rfabbri.github.io/differential-mvg/">Overview of our Multiview Differential Geometry of Curves and Surfaces research programme</a>
- <!--  <li><a href="http://vision.lems.brown.edu/3d-drawing">The previous page for the 3d curve drawing system</a></li> -->
- <li><a href="http://rfabbri.github.io">Updated list of publications</a></li>
 </ul>
 
-<h3>HC for locating critical points of Dynamical Systems</h3>
+<h3>Books</h3>
+
+<ul>
+  <li><b><a class="publink" href="https://bertini.nd.edu/book.html"></a></b>, Numerically solving polynomial systems with Bertini<i>Numerically solving polynomial systems with {B}ertini</i>, 
+Bates, Hauenstein, Sommese, and Wampler (<a href="https://bertini.nd.edu">code</a>)
+  </li>
+</ul>
+
+
+<h3>HC for critical points of Dynamical Systems</h3>
 
 del Campo, Abraham Martin, and Jose Israel Rodriguez. "Critical points via monodromy and local methods." Journal of Symbolic Computation 79 (2017): 559-574.
+
+<p>
+<a class="soon">Work in Progress!</a>
+</p>
 
 
 
